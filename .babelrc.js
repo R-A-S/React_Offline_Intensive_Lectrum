@@ -1,4 +1,4 @@
-module.exports = (api) => {
+module.exports = api => {
     const env = api.env();
 
     api.cache.using(() => env === 'development');
@@ -10,9 +10,7 @@ module.exports = (api) => {
         '@babel/plugin-proposal-async-generator-functions',
     ];
 
-    if (env === 'node') {
-        plugins.push('dynamic-import-node');
-    } else {
+    if (env === 'development') {
         plugins.push('react-hot-loader/babel');
     }
 
