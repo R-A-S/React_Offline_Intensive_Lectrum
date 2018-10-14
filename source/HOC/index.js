@@ -1,5 +1,21 @@
-import { createContext } from 'react';
+import React, { Component, createContext } from 'react';
 
 const { Provider, Consumer } = createContext();
 
-export { Provider, Consumer };
+const withProfile = (Enhanceable) => {
+    return class WithProfile extends Component {
+        render() {
+            return (
+                <Consumer>{(context) => (
+                    <Enhanceable
+                        { ...context }
+                        { ...this.props }
+                    />
+                )}
+                </Consumer>
+            );
+        }
+    };
+};
+
+export { Provider, Consumer, withProfile };

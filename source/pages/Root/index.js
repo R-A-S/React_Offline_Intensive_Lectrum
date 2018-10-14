@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader';
 
 // Components
 import Feed from '../../components/Feed';
+import Catcher from '../../components/Catcher';
 import { Provider } from '../../HOC';
 
 // Instruments
@@ -20,9 +21,11 @@ export default class Root extends Component {
     render() {
         return (
             <>
-                <Provider value={options}>
-                    <Feed />
-                </Provider>
+                <Catcher>
+                    <Provider value={options}>
+                        <Feed />
+                    </Provider>
+                </Catcher>
             </>
         );
     }
