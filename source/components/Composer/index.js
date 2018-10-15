@@ -52,16 +52,7 @@ export class Composer extends Component {
         }
     };
 
-    componentWillMount() {
-        console.log('componentWillMount');
-    }
-
-    componentDidMount() {
-        console.log('componentDidMount');
-    }
-
     render() {
-        console.log('render');
         const { avatar, currentUserFirstName } = this.props;
         const { comment } = this.state;
 
