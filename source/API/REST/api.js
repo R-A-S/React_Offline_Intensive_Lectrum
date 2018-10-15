@@ -34,4 +34,36 @@ export default new class Api {
 
         return post;
     }
+
+    async removePost(id) {
+        const response = await fetch(`${MAIN_URL}/${id}`, {
+            method:  'DELETE',
+            headers: {
+                authorization: TOKEN,
+            },
+        });
+
+        if (response.status !== 204) {
+            throw new Error('Post was not deleted.');
+        }
+
+        return null;
+    }
+
+    async likePost(id) {
+        const response = await fetch(`${MAIN_URL}/${id}`, {
+            method:  'PUT',
+            headers: {
+                authorization: TOKEN,
+            },
+        });
+
+        if (response.status !== 200) {
+            throw new Error('Post was not liked.');
+        }
+
+        const { data: post } = await response.json();
+
+        return post;
+    }
 }();

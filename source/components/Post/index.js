@@ -7,6 +7,9 @@ import { string, number, shape, arrayOf } from 'prop-types';
 import Styles from './styles.m.css';
 import { withProfile } from '../../HOC';
 
+// Components
+import Like from '../Like';
+
 @withProfile
 export default class Post extends Component {
     static propTypes = {
@@ -26,18 +29,34 @@ export default class Post extends Component {
         ).isRequired,
     };
 
+    _getCross = () => {
+        const { firstName, lastName, currentUserFirstName, currentUserLastName } = this.props;
+
+        return firstName === currentUserFirstName && lastName === currentUserLastName ? (
+            <span className={Styles.cross} onClick={this._removePost} />
+        ) : null;
+    };
+
+    _removePost = () => {
+        const { id, removePost } = this.props;
+
+        removePost(id);
+    };
+
     render() {
-        const { avatar, firstName, lastName, comment, created } = this.props;
+        const { avatar, firstName, lastName, comment, created, id, likes, likePost } = this.props;
+        const cross = this._getCross();
 
         return (
             <section className={Styles.post}>
-                <span className={Styles.cross} />
+                {cross}
                 <img src={avatar} />
                 <a>
                     {firstName} {lastName}
                 </a>
                 <time>{moment.unix(created).format('MMMM D h:mm:ss a')}</time>
                 <p>{comment}</p>
+                <Like id={id} likes={likes} likePost={likePost} />
             </section>
         );
     }
