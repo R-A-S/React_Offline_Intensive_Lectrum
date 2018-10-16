@@ -20,6 +20,15 @@ import { withProfile } from '../../HOC';
 
 @withProfile
 export default class Feed extends Component {
+    constructor () {
+        super();
+
+    console.log('→ this.props', this.props);
+
+        // this.state = {
+
+        // }
+    }
     state = {
         posts: [],
         isSpinning: false,
