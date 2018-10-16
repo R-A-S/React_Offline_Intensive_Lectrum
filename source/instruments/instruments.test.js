@@ -8,4 +8,8 @@ describe('helpers:', () => {
     test('should throw if call with non number', () => {
         expect(() => sum('привет', 'приветик!!')).toThrow();
     });
+
+    test('should add two number', () => {
+        expect(sum(2, 2)).toBe(4);
+    });
 });
