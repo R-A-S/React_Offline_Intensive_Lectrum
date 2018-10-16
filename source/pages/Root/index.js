@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 
 const log = (message, color) => {
-    return console.log(`%c ${message}`, `background: #222; color: ${color}`);
+    return console.log(`%c ${message}`, `background: #fff; color: ${color}`);
 };
 
 class Silo extends Component {
