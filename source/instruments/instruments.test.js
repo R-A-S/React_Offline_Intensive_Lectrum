@@ -6,6 +6,6 @@ describe('helpers:', () => {
     });
 
     test('should throw if call with non number', () => {
-        expect(sum).toBeInstanceOf(Function);
+        expect(() => sum('привет', 'приветик!!')).toThrow();
     });
 });
