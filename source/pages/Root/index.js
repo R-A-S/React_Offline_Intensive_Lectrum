@@ -43,10 +43,20 @@ class Silo extends Component {
 
     componentDidUpdate () {
         log('CHILD → componentDidUpdate', 'yellow');
+        const a = 2;
+        const b = 3;
+
+        const c = a + b;
+
+        debugger;
+
+        const d = c + 1;
     }
 
     getSnapshotBeforeUpdate () {
         log('CHILD → getSnapshotBeforeUpdate', 'coral');
+
+        debugger;
 
         return null;
     }
