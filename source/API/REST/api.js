@@ -3,7 +3,7 @@ import { MAIN_URL, TOKEN } from '../config';
 
 export default new class Api {
     async fetchPosts() {
-        const response = await fetch(MAIN_URL, {
+        const response = await fetch(`${MAIN_URL}?size=20`, {
             method: 'GET',
         });
 

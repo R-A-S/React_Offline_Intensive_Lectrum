@@ -18,13 +18,14 @@ import { GROUP_ID, api } from '../../API';
 import { socket } from '../../socket/init';
 import { withProfile } from '../../HOC';
 
+// Flux
+import dispatcher from '../flux/dispatcher';
+import actions from '../flux/actions';
+import PostsStore from '../flux/store';
+
 @withProfile
 export default class Feed extends Component {
-    state = {
-        posts: [],
-        isSpinning: false,
-        isPostmanAppear: true,
-    };
+    state = {};
 
     componentDidMount() {
         const { currentUserFirstName, currentUserLastName } = this.props;
