@@ -25,11 +25,15 @@ import PostsStore from '../flux/store';
 
 @withProfile
 export default class Feed extends Component {
-    state = {};
+    // 1
+    state = PostsStore.getStore();
 
     componentDidMount() {
         const { currentUserFirstName, currentUserLastName } = this.props;
         this._fetchPostsAsync();
+
+        // 3
+        PostsStore.subscribe(this._onChange);
 
         socket.emit('join', GROUP_ID);
 
@@ -74,6 +78,16 @@ export default class Feed extends Component {
             }
         });
     }
+
+    componentWillUnmount() {
+        // 4
+        PostsStore.unsubscribe(this._onChange);
+    }
+
+    // 2
+    _onChange = () => {
+        this.setState(PostsStore.getStore());
+    };
 
     _setPostsFetchingState = (state) => {
         this.setState({
