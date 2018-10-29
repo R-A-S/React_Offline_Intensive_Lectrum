@@ -8,10 +8,10 @@
 
 <div align="center">
     <!-- Package version -->
-    <img src="https://img.shields.io/github/package-json/v/lectrum/react-offline-intensive.svg?longCache=true&style=flat-square"
+    <img src="https://img.shields.io/github/package-json/v/lectrum/react-intensive.svg?longCache=true&style=flat-square"
         alt="Package version" />
     <!-- Last commit -->
-    <img src="https://img.shields.io/github/last-commit/lectrum/react-offline-intensive.svg?longCache=true&style=flat-square" alt="Last commit"
+    <img src="https://img.shields.io/github/last-commit/lectrum/react-intensive.svg?longCache=true&style=flat-square" alt="Last commit"
     />
     <!-- Dependencies -->
     <img src="https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg?longCache=true&style=flat-square" alt="Dependencies"
@@ -67,7 +67,7 @@
 [генератор проекта компании Lectrum](https://github.com/Lectrum/generator-ui):
 
 ```bash
-npm install -g yo @lectrum/generator-ui@latest
+npm install -g yo @lectrum/generator-ui
 ```
 
 > Если ты пользователь Windows, [настрой себе терминал](https://github.com/Lectrum/FAQ#%D0%AF-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-windows-%D0%9A%D0%B0%D0%BA-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D1%8C-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB-%D0%B4%D0%BB%D1%8F-%D1%83%D0%B4%D0%BE%D0%B1%D0%BD%D0%BE%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B)
@@ -84,13 +84,13 @@ npm install -g yo @lectrum/generator-ui@latest
 8. Склонируй этот проект:
 
 ```bash
-git clone https://github.com/Lectrum/react-offline-intensive.git
+git clone https://github.com/Lectrum/react-intensive.git
 ```
 
 9. Перейди в проект, выполнив команду:
 
 ```bash
-cd react-offline-intensive
+cd react-intensive
 ```
 
 10. В терминале, находясь в директории с текущим проектом, выполни команду:
